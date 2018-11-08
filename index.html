@@ -33,7 +33,7 @@
 
   <div class="row">
       <div class="col-md-6 col-sm-6">
-        <div><img src="assets/images/squared/uk.png" class="img-thumbnail"></div>
+        <div class="create__image"><img src="assets/images/squared/uk.png" class="img-thumbnail create__img"></div>
       </div>
       <div class="col-md-6 col-sm-6">
           <label for="image">
@@ -72,32 +72,35 @@
   <div class="col-md-6 col-sm-6">
 
               <div class="nuevos_tweets">
-                <div class="row"></div>
+                <div class="row" id="eliminar_tweet">
                  <h3>Francisca Quiroga</h3>
                             <div class="row">
-                              <div class="col-md-3">
+                              <div class="col-md-3 nueva_img">
                                 <img src="assets/images/squared/15.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="col-md-9">
                                 <p class="texto_tweet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dignissimos facere eius blanditiis, dolore nisi, voluptatem cum maiores tempore deleniti alias odio nam molestiae iusto quod doloribus. Obcaecati, assumenda excepturi?</p>
                               </div>
                             </div>
-                    <ul >
+                    <ul class="contador" >
                         <li>
-                        <button type="button" class="btn btn-default">Borrar Tweet</button>
+                        <button type="button" class="btn btn-default eliminar">Borrar Tweet</button>
                         </li>
                         <li>
                           <a class="like" href="#"><i class="fas fa-heart fa-2x"></i></a>
                        </li>
-                        <li>     
-                          <div>24</div>
+                        <li class="social_likes">     
+                          <div class="numero_likes">24</div>
                           <div>Likes</div>
                         </li>
 
                     </ul>
                 <hr>
+                </div>
               </div>
-              </div> 
+
+
+    </div> 
     
   </div>
   

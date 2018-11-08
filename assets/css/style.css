@@ -77,6 +77,14 @@ input {
   padding-left:10px;
 }
 
+
+.like {  
+  color: #ccc;
+  display: block;
+  text-align: center;
+  transition: all .35s ease-out;
+  }
+
 .tweet_like {
   color: tomato;
 }

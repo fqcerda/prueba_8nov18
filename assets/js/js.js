@@ -2,18 +2,23 @@ $(function() {
     console.log( "ready!" );
 	
 
-		$('.cards').on('click', '.like', function() {
-		$(this).toggleClass( 'tweet_like' );
+
+		$('.nuevos_tweets').on('click', '.like', function(event) {
+		event.preventDefault();
+		event.stopPropagation();
+		$(this).addClass( 'tweet_like' );
+
 		});
 
-		$('.social').on('click', '.like', function(event) {
+
+		$('.nuevos__tweets').on('click', '.like', function(event) {
 		event.preventDefault();
 		event.stopPropagation();
 		// $(this).toggleClass( 'card__like--red' );
-		var target = $(this).siblings('.card__hidden')
-							.find('.social__element')
+		var target = $(this).siblings('.contador')
+							.find('.social_likes')
 							.eq(1)
-							.children('.social__number');
+							.children('.numero_likes');
 		var number = target.text();
 		number = parseInt(number);
 		if ($(this).hasClass('tweet_like')) {
@@ -23,6 +28,13 @@ $(function() {
 			$(this).addClass('tweet_like');
 			target.text(number += 1);
 		}
+		});
+
+			$('#image').on('change', function (event) {
+		var fileName = $(this).val();
+		var fileUrl = 'assets/images/squared/' + fileName;
+
+		$('.create__image .create__img').attr('src', fileUrl);
 		});
 
 
@@ -45,17 +57,18 @@ $(function() {
                                 <p class="texto_tweet">${ comment }</p>
                               </div>
                             </div>
-                    <ul >
+                    <ul class="contador" >
                         <li>
-                        <button type="button" class="btn btn-default">Borrar Tweet</button>
+                        <button type="button" class="btn btn-default eliminar">Borrar Tweet</button>
                         </li>
                         <li>
-                          <a href="#"><i class="fas fa-heart fa-2x"></i></a>
+                          <a class="like" href="#"><i class="fas fa-heart fa-2x"></i></a>
                        </li>
-                        <li>     
-                          <div>0</div>
+                        <li class="social_likes">     
+                          <div class="numero_likes">24</div>
                           <div>Likes</div>
                         </li>
+
                     </ul>
                 <hr>
               </div> `);
@@ -63,6 +76,14 @@ $(function() {
 	
 	});
 
+
+
+
+
+ $(".nuevos_tweets").on("click", ".eliminar",function(){ 
+       $(this).parent().parent().parent().fadeOut(900); 
+         
+       })
 
 	
 
