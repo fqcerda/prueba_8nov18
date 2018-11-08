@@ -1,0 +1,88 @@
+body {
+  background-color: #f9f9f9;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1,h2,h3 {
+font-family: 'Raleway', sans-serif;
+font-weight: 800;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 1000px;
+  background-color: white;
+}
+
+
+
+.create_select {
+  width: 100%;
+}
+
+.boton_submit {
+  background-color: #29a3ee;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 1.25em;
+  font-weight: 300;
+  margin: 20px 0;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.boton_submit:hover {
+  background-color: #1c8fd8;
+}
+
+.label_select_image{
+  margin-top: 30px;
+}
+
+label {
+  width: 100%
+  font-weight: 400;
+
+}
+
+li {
+  display: inline-block;
+  float: right;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+hr {
+  clear: both;
+}
+
+.comentario {
+  margin-bottom: 20px;
+}
+
+.form_nombre {
+  width: 100%
+}
+
+.input_form_nombre {
+  width: 100%
+}
+
+input {
+  font-weight: 400;
+  padding-left:10px;
+}
+
+.tweet_like {
+  color: tomato;
+}
+
+@media (max-width: 980px) {
+  .texto_tweet {
+    margin-top: 20px;
+  }
+}
